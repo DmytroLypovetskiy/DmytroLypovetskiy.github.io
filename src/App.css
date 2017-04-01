@@ -3,10 +3,21 @@
 
 body {
   background: #2a2a2a;
-  font: 16px 'Helvetica Neue'; }
+  font: 14px Helvetica, "Helvetica Neue", sans-serif; }
 
 p {
   margin: 0 0 40px; }
+
+ul {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0; }
+
+dl {
+  margin: 0;
+  padding: 0; }
+  dl dd {
+    margin: 0; }
 
 .App {
   background-color: #fff;
@@ -19,9 +30,7 @@ p {
   overflow: hidden;
   padding: 40px; }
   .sidebar h1 {
-    font-family: 'Slabo 27px', serif;
-    font-size: 45px;
-    line-height: 0.75;
+    font: 45px/0.75 "Slabo 27px", serif;
     margin: 0 0 40px;
     text-align: center;
     text-transform: uppercase; }
@@ -29,9 +38,7 @@ p {
       font-size: 45px; }
   .sidebar h2, .sidebar h3 {
     color: #9d401c;
-    font-family: 'Slabo 27px', serif;
-    font-size: 25px;
-    line-height: 0.75;
+    font: 25px/0.75 "Slabo 27px", serif;
     margin: 0 0 10px;
     text-align: center;
     text-transform: uppercase; }
@@ -53,12 +60,39 @@ p {
 .content {
   padding: 40px; }
   .content h2 {
-    font-family: 'Slabo 27px', serif;
-    font-size: 30px;
-    line-height: 0.75;
+    font: 30px/0.75 "Slabo 27px", serif;
     margin: 0 0 40px;
     text-align: center;
     text-transform: uppercase; }
+    .content h2:before {
+      content: "\27E2 "; }
+    .content h2:after {
+      content: " \27E3"; }
+  .content h4, .content h5 {
+    font: 16px/1.5 "Slabo 13px", serif;
+    margin: 0 0 10px;
+    text-transform: uppercase; }
+  .content h5 {
+    color: #9d401c; }
+  .content .date {
+    color: #838383;
+    font-size: 12px; }
+  .content dl {
+    position: relative; }
+    .content dl:after {
+      content: "\27E2 \22EF \27E3";
+      display: block;
+      margin-bottom: 40px;
+      text-align: center; }
+  .content ul li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative; }
+    .content ul li:before {
+      color: #9d401c;
+      content: "\27E3";
+      left: 0;
+      position: absolute; }
 
 @media (min-width: 768px) {
   .sidebar {
@@ -89,3 +123,14 @@ p {
   .content {
     height: 1%;
     overflow: hidden; } }
+
+@media (min-width: 920px) {
+  .content dl {
+    overflow: hidden; }
+    .content dl dt {
+      float: left;
+      padding-right: 20px;
+      width: 33.3%; }
+    .content dl dd {
+      height: 1%;
+      overflow: hidden; } }
