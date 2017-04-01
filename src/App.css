@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #2a2a2a;
+  font: 16px 'Helvetica Neue'; }
+
+p {
+  margin: 0 0 40px; }
+
+.App {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1050px;
+  overflow: hidden; }
+
+.sidebar {
+  background-color: #f7f7f7;
+  overflow: hidden;
+  padding: 40px; }
+  .sidebar h1 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 45px;
+    line-height: 0.75;
+    margin: 0 0 40px;
+    text-align: center;
+    text-transform: uppercase; }
+    .sidebar h1 small {
+      font-size: 45px; }
+  .sidebar h2, .sidebar h3 {
+    color: #9d401c;
+    font-family: 'Slabo 27px', serif;
+    font-size: 25px;
+    line-height: 0.75;
+    margin: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase; }
+  .sidebar h2 {
+    letter-spacing: 2.4px; }
+  .sidebar h3 {
+    letter-spacing: 1px;
+    margin-bottom: 40px; }
+  .sidebar .photo {
+    margin-bottom: 40px; }
+    .sidebar .photo .dl-photo {
+      border-radius: 100%;
+      display: block;
+      margin: 0 auto;
+      width: 200px; }
+    .sidebar .photo .triangle-svg {
+      display: none; }
+
+.content {
+  padding: 40px; }
+  .content h2 {
+    font-family: 'Slabo 27px', serif;
+    font-size: 30px;
+    line-height: 0.75;
+    margin: 0 0 40px;
+    text-align: center;
+    text-transform: uppercase; }
+
+@media (min-width: 768px) {
+  .sidebar {
+    float: left;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    width: 350px; }
+    .sidebar h1 small {
+      display: block;
+      font-size: 30px;
+      margin-top: 10px; }
+    .sidebar .photo {
+      margin-left: -40px;
+      margin-right: -40px;
+      position: relative; }
+      .sidebar .photo img {
+        display: block; }
+        .sidebar .photo img.dl-photo {
+          border-radius: 0;
+          width: 100%; }
+        .sidebar .photo img.triangle-svg {
+          display: block;
+          height: 40px;
+          position: absolute;
+          width: 100%; }
+          .sidebar .photo img.triangle-svg polygon {
+            fill: #f7f7f7; }
+  .content {
+    height: 1%;
+    overflow: hidden; } }
