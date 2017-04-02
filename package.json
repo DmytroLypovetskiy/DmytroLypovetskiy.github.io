@@ -55,7 +55,6 @@
     "test": "node scripts/test.js --env=jsdom",
     "build-css": "node-sass --include-path scss src/scss/*.scss   src/*.css",
     "watch-css": "node-sass -w src/scss/ -o src",
-    "deploy" : "npm run build&&gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
