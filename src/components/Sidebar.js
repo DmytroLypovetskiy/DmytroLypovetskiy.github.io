@@ -1,7 +1,9 @@
 import React from 'react';
 import photo from '../img/photo.jpg';
 import triangle from '../img/triangle.svg';
-import {Education} from '../components';
+import triangleLeft from '../img/triangle-left.svg';
+import triangleRight from '../img/triangle-right.svg';
+import {Education, Languages, Contacts, Intro} from '../components';
 
 export const Sidebar = (props) => (
     <aside className="sidebar">
@@ -9,15 +11,13 @@ export const Sidebar = (props) => (
         <div className="photo">
             <img src={triangle} className="triangle-svg" alt="" />
             <img src={photo} className="dl-photo" alt={props.data.firstName + " " + props.data.lastName} />
-
+            <img src={triangleLeft} className="triangle-left-svg" alt="" />
+            <img src={triangleRight} className="triangle-right-svg" alt="" />
         </div>
-        <h2>{props.data.title}</h2>
-        <h3>{props.data.role}</h3>
-        <p>{props.data.overview}</p>
-
-
-        <Education />
-
+        <Intro {...props} />
+        <Education education={props.data.education} />
+        <Languages languages={props.data.languages} />
+        <Contacts contacts={props.data.contacts} />
 
     </aside>
 )

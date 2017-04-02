@@ -1,5 +1,5 @@
 import React from 'react';
-import {WorkExperience} from './WorkExperience';
+import {WorkExperience} from '../components';
 
 export const Section = (props) => (
     <section className="content">

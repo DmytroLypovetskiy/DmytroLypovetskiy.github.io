@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Section, Sidebar} from './components';
+import {Section, Sidebar, Footer} from './components';
 
 class App extends Component {
     data = {
@@ -121,19 +121,29 @@ class App extends Component {
             ]
         },
         education: {
+            title:      'Education',
+            date:       '2000 – 2005',
             degree:     'Master\'s degree',
             faculty:    'Computer Technology/Computer Systems Technology',
             university: 'Kharkiv National University of Radio electronics',
             specialty:  'Specialized computer systems'
         },
+        languages: {
+            title: 'Languages',
+            list: [
+                {id: 1, name: 'Ukrainian', level: 'Native or bilingual proficiency'},
+                {id: 2, name: 'Russian', level: 'Native or bilingual proficiency'},
+                {id: 3, name: 'English', level: 'Professional working proficiency'}
+            ]
+        },
 
-        languages: [
-            {id: 1, name: 'Ukrainian', level: 'Native or bilingual proficiency'},
-            {id: 2, name: 'Russian', level: 'Native or bilingual proficiency'},
-            {id: 3, name: 'English', level: 'Professional working proficiency'}
-        ]
-
-
+        contacts: {
+            title: 'Contacts',
+            list: [
+                {id: 1, name: 'phone', info: '201-275-5909'},
+                {id: 2, name: 'email', info: 'lipovetskiy@gmail.com'},
+            ]
+        },
     }
 
     render() {
@@ -141,6 +151,7 @@ class App extends Component {
             <div className="App">
                 <Sidebar data={this.data} />
                 <Section workExperience={this.data.workExperience} />
+                <Footer builds={this.data.builds} />
             </div>
         );
     }
